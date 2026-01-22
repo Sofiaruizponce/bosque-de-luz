@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bosque de Luz Cabañas</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; line-height: 1.6; color:#333; }
+    nav { background:#084c3f; color:white; padding:10px 20px; position:sticky; top:0; }
+    nav a { color:white; margin: 0 10px; text-decoration:none; font-weight:600; }
+    header { background:url('FOTO_HERO.jpg') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
+    header h1 { font-size:3rem; }
+    .btn { background:#f2c94c; padding:10px 20px; color:#084c3f; font-weight:700; text-decoration:none; border-radius:5px; }
+    section { padding:40px 20px; }
+    .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .card img { width:100%; border-radius:8px; }
+    footer { background:#084c3f; color:white; text-align:center; padding:20px; }
+  </style>
+</head>
+
+<body>
+  <!-- Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#cabanas">Cabañas</a>
+    <a href="#experiencias">Experiencias</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Hero -->
+  <header id="inicio">
+    <div>
+      <h1>Bosque de Luz Cabañas</h1>
+      <p>Descubre un refugio en la naturaleza 🌲</p>
+      <a href="#contacto" class="btn">Reserva Ahora</a>
+    </div>
+  </header>
+
+  <!-- Sobre Nosotros -->
+  <section id="sobre">
+    <h2>Sobre nosotros</h2>
+    <p>Bienvenido a Bosque de Luz Cabañas, un lugar para desconectar y vivir la tranquilidad del bosque. Perfecto para escapadas, pareja o familia.</p>
+  </section>
+
+  <!-- Cabañas -->
+  <section id="cabanas">
+    <h2>Nuestras Cabañas</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="CABANA1.jpg" alt="Cabaña 1">
+        <h3>Cabaña Principal</h3>
+        <p>Hermosa cabaña con vista al bosque.</p>
+      </div>
+      <div class="card">
+        <img src="CABANA2.jpg" alt="Cabaña 2">
+        <h3>Cabaña Familiar</h3>
+        <p>Espacio ideal para descanso en familia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencias -->
+  <section id="experiencias">
+    <h2>Experiencias en la naturaleza</h2>
+    <p>Disfruta caminatas, amaneceres y la paz del entorno natural.</p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto & Reservas</h2>
+    <p>Escríbenos por WhatsApp:</p>
+    <a class="btn" href="https://wa.me/TU_NUMERO">WhatsApp</a>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 Bosque de Luz Cabañas. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
