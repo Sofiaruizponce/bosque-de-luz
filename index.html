@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bosque de Luz Cabañas</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; line-height: 1.6; color:#333; }
+    body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+    h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
     nav { background:#084c3f; color:white; padding:10px 20px; position:sticky; top:0; }
     nav a { color:white; margin: 0 10px; text-decoration:none; font-weight:600; }
     header { background:url('FOTO_HERO.jpg') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
     header h1 { font-size:3rem; }
-    .btn { background:#f2c94c; padding:10px 20px; color:#084c3f; font-weight:700; text-decoration:none; border-radius:5px; }
+    .btn {
+  background: #f2c94c;
+  padding: 14px 30px;
+  color: #084c3f;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e0b83f;
+  transform: translateY(-2px);
+}
     section { padding:40px 20px; }
     .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
     .card img { width:100%; border-radius:8px; }
@@ -74,6 +95,26 @@
   padding: 20px;
   border-radius: 14px;
 }
+    .scroll-down {
+  position: absolute;
+  bottom: 25px;
+  font-size: 2.5rem;
+  color: white;
+  animation: bounce 2s infinite;
+  z-index: 4;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
   </style>
 </head>
 
@@ -98,6 +139,7 @@
     <h1>Bosque de Luz Cabañas</h1>
     <p>Un refugio natural entre el bosque y la tranquilidad</p>
     <a href="#contacto" class="btn">Reserva Ahora</a>
+    <div class="scroll-down">⌄</div>
   </div>
 </header>
   <!-- Sobre Nosotros -->
