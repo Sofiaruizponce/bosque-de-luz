@@ -114,6 +114,33 @@
   60% {
     transform: translateY(4px);
   }
+#galeria {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#galeria h2 {
+  margin-bottom: 40px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
 }
   </style>
 </head>
@@ -142,6 +169,18 @@
     <div class="scroll-down">⌄</div>
   </div>
 </header>
+  <section id="galeria">
+  <h2>Galería</h2>
+
+  <div class="galeria-grid">
+    <img src="foto1.jpg" alt="Bosque de Luz Cabañas">
+    <img src="foto2.jpg" alt="Cabañas en la naturaleza">
+    <img src="foto3.jpg" alt="Interior de las cabañas">
+    <img src="foto4.jpg" alt="Vista natural del bosque">
+    <img src="foto5.jpg" alt="Atardecer en Bosque de Luz">
+    <img src="foto6.jpg" alt="Descanso y tranquilidad">
+  </div>
+</section>
   <!-- Sobre Nosotros -->
 <section id="sobre">
   <h2>Sobre nosotros</h2>
