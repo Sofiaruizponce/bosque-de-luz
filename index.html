@@ -142,6 +142,67 @@
 .galeria-grid img:hover {
   transform: scale(1.05);
 }
+    #cabanas {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cabana {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.cabana summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cabana summary::-webkit-details-marker {
+  display: none;
+}
+
+.cabana h3 {
+  margin: 0;
+}
+
+.cabana p {
+  margin: 0;
+  color: #666;
+}
+
+.cabana .btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.cabana-info {
+  padding: 30px;
+}
+
+.cabana-galeria {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.cabana-galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
   </style>
 </head>
 
@@ -223,6 +284,94 @@
     <img src="foto5.jpg" alt="Atardecer en Bosque de Luz">
     <img src="foto6.jpg" alt="Descanso y tranquilidad">
   </div>
+</section>
+  <section id="cabanas">
+  <h2>Nuestras Cabañas</h2>
+
+  <!-- CABAÑA 1 -->
+  <details class="cabana">
+    <summary>
+      <h3>La Paisita</h3>
+      <p>Hasta 4 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Cabaña acogedora ideal para parejas o grupos pequeños, rodeada de naturaleza y tranquilidad.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="paisita1.jpg">
+        <img src="paisita2.jpg">
+        <img src="paisita3.jpg">
+      </div>
+    </div>
+  </details>
+
+  <!-- CABAÑA 2 -->
+  <details class="cabana">
+    <summary>
+      <h3>Esmeralda</h3>
+      <p>Hasta 4 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Perfecta para descansar y desconectarse en un entorno natural único.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="esmeralda1.jpg">
+        <img src="esmeralda2.jpg">
+        <img src="esmeralda3.jpg">
+      </div>
+    </div>
+  </details>
+
+  <!-- CABAÑA 3 -->
+  <details class="cabana">
+    <summary>
+      <h3>Cielo</h3>
+      <p>Hasta 7 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Amplia y cómoda, ideal para familias o grupos grandes.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="cielo1.jpg">
+        <img src="cielo2.jpg">
+        <img src="cielo3.jpg">
+      </div>
+    </div>
+  </details>
+
+  <!-- CABAÑA 4 -->
+  <details class="cabana">
+    <summary>
+      <h3>Ágata</h3>
+      <p>Hasta 7 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Espaciosa, elegante y rodeada de bosque.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="agata1.jpg">
+        <img src="agata2.jpg">
+        <img src="agata3.jpg">
+      </div>
+    </div>
+  </details>
+
 </section>
   <!-- Experiencias -->
   <section id="experiencias">
