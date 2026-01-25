@@ -114,11 +114,10 @@
   60% {
     transform: translateY(4px);
   }
-#galeria {
-  padding: 80px 20px;
-  text-align: center;
 }
-    #cabanas {
+
+/* CABAÑAS */
+#cabanas {
   padding: 80px 20px;
   max-width: 1100px;
   margin: auto;
@@ -129,16 +128,6 @@
   border-radius: 20px;
   margin-bottom: 30px;
   overflow: hidden;
-}
-
-.cabana summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
 }
 
 .cabana summary::-webkit-details-marker {
@@ -166,6 +155,7 @@
   padding: 30px;
 }
 
+/* GALERÍA ESTILO SOTAVENTO */
 .cabana-galeria {
   margin-top: 20px;
   max-width: 900px;
@@ -182,7 +172,8 @@
   object-fit: cover;
   border-radius: 12px;
 }
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
   .cabana-galeria {
     max-width: 100%;
   }
