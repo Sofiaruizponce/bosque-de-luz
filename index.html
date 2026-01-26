@@ -206,26 +206,59 @@
 }
 #experiencias {
   padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
 }
 
 .experiencias-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
 
 .experiencia {
-  background: #fafafa;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 25px 10px;
 }
 
 .experiencia h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
 }
+
+.experiencia p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* EVENTOS */
+.eventos {
+  margin-top: 70px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.eventos h3 {
+  margin-bottom: 15px;
+}
+
+.eventos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.eventos li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+  @media (min-width: 1024px) {
+  #instagram,
+  #experiencias {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
   </style>
 </head>
@@ -382,42 +415,64 @@
   <div class="experiencias-grid">
 
     <div class="experiencia">
-      <h3>🌿 Descanso y desconexión</h3>
+      <h3>🌿 Senderismo</h3>
       <p>
-        Un espacio rodeado de bosque, ideal para desconectarse del ruido y reconectar con la naturaleza.
+        Caminatas rodeadas de bosque, ideales para conectar con la naturaleza y disfrutar del entorno.
       </p>
     </div>
 
     <div class="experiencia">
-      <h3>🔥 Fogatas nocturnas</h3>
+      <h3>🎣 Lago y pesca</h3>
       <p>
-        Comparte momentos únicos bajo las estrellas en un ambiente cálido y tranquilo.
+        Espacio natural para disfrutar del lago y la pesca en un ambiente tranquilo.
       </p>
     </div>
 
     <div class="experiencia">
-      <h3>💍 Eventos especiales</h3>
+      <h3>🛝 Parque infantil</h3>
       <p>
-        Cumpleaños, aniversarios, pedidas de mano o celebraciones íntimas en un entorno natural.
+        Área para niños con columpios, resbaladero y juegos al aire libre.
       </p>
     </div>
 
     <div class="experiencia">
-      <h3>👨‍👩‍👧‍👦 Reuniones familiares</h3>
+      <h3>🔥 Fogatas</h3>
       <p>
-        Espacios ideales para compartir en familia o con amigos, con comodidad y privacidad.
+        Momentos especiales alrededor del fuego, perfectos para compartir en la noche.
+      </p>
+    </div>
+
+    <div class="experiencia">
+      <h3>🏊 Piscina</h3>
+      <p>
+        Piscina para relajarse y disfrutar durante el día.
+      </p>
+    </div>
+
+    <div class="experiencia">
+      <h3>🍽️ Áreas comunes</h3>
+      <p>
+        Espacios para consumir alimentos y compartir sin necesidad de permanecer siempre en las cabañas.
       </p>
     </div>
 
   </div>
+
+  <div class="eventos">
+    <h3>Celebraciones y eventos especiales</h3>
+    <p>
+      En Bosque de Luz también es posible realizar celebraciones con un excedente adicional, como:
+    </p>
+
+    <ul>
+      <li>🎂 Cumpleaños</li>
+      <li>💍 Bodas</li>
+      <li>✨ Pedidas de mano o de noviazgo</li>
+      <li>❤️ Aniversarios</li>
+    </ul>
+  </div>
 </section>
 
-
-  <!-- Experiencias -->
-  <section id="experiencias">
-    <h2>Experiencias en la naturaleza</h2>
-    <p>Disfruta caminatas, amaneceres y la paz del entorno natural.</p>
-  </section>
 
   <!-- Contacto -->
 <section id="contacto">
