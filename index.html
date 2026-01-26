@@ -181,7 +181,52 @@
   .cabana-galeria img {
     height: 120px;
   }
+#instagram {
+  padding: 60px 20px;
+  text-align: center;
 }
+
+#instagram p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+.ig-link img {
+  width: 26px;
+  height: 26px;
+}
+#experiencias {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.experiencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.experiencia {
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.experiencia h3 {
+  margin-top: 0;
+}
+
   </style>
 </head>
 
@@ -318,6 +363,55 @@
 
   </div>
 </section>
+<section id="instagram">
+  <p>Síguenos en Instagram</p>
+
+  <a 
+    href="https://www.instagram.com/bosquedeluzcabanas?igsh=MTZzaTBodWE3Mmp6NQ%3D%3D&utm_source=qr"
+    target="_blank"
+    class="ig-link"
+  >
+    <img src="instagram.svg" alt="Instagram Bosque de Luz Cabañas">
+    <span>@bosquedeluzcabanas</span>
+  </a>
+</section>
+
+  <section id="experiencias">
+  <h2>Experiencias en Bosque de Luz</h2>
+
+  <div class="experiencias-grid">
+
+    <div class="experiencia">
+      <h3>🌿 Descanso y desconexión</h3>
+      <p>
+        Un espacio rodeado de bosque, ideal para desconectarse del ruido y reconectar con la naturaleza.
+      </p>
+    </div>
+
+    <div class="experiencia">
+      <h3>🔥 Fogatas nocturnas</h3>
+      <p>
+        Comparte momentos únicos bajo las estrellas en un ambiente cálido y tranquilo.
+      </p>
+    </div>
+
+    <div class="experiencia">
+      <h3>💍 Eventos especiales</h3>
+      <p>
+        Cumpleaños, aniversarios, pedidas de mano o celebraciones íntimas en un entorno natural.
+      </p>
+    </div>
+
+    <div class="experiencia">
+      <h3>👨‍👩‍👧‍👦 Reuniones familiares</h3>
+      <p>
+        Espacios ideales para compartir en familia o con amigos, con comodidad y privacidad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Experiencias -->
   <section id="experiencias">
