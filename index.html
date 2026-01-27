@@ -481,67 +481,179 @@
   height: 18px;
 }
 
-/* Asegurar que en pantallas grandes no crezcan */
+<style>
+
+/* =========================
+   CONTENEDORES GENERALES
+   ========================= */
+
 @media (min-width: 1024px) {
-  .instagram-link img {
-    width: 18px;
-    height: 18px;
+  #instagram,
+  #experiencias {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-  </style>
-</head>
-<a 
-  href="https://wa.me/50494527261" 
-  class="whatsapp-float" 
-  target="_blank"
-  aria-label="WhatsApp Bosque de Luz">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-  <footer class="footer">
-  <div class="footer-contenido">
+/* =========================
+   INSTAGRAM
+   ========================= */
 
-    <div class="footer-col">
-      <h3>Bosque de Luz Cabañas</h3>
-      <p>
-        Un refugio natural en Mogote, Santa Bárbara.<br>
-        Naturaleza, descanso y experiencias inolvidables.
-      </p>
-    </div>
+#instagram {
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    <div class="footer-col">
-      <h4>Ubicación</h4>
-      <p>Mogote, Santa Bárbara<br>Bosque de Luz</p>
-      <a href="https://maps.app.goo.gl/ggpqtQFWQF7kNaeF8" target="_blank">
-        📍 Cómo llegar
-      </a>
-    </div>
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
 
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <p>📞 +504 9452 7261</p>
-      <a href="https://wa.me/50494527261" target="_blank">
-        WhatsApp
-      </a>
-    </div>
+/* ICONO INSTAGRAM (CONTROLADO) */
+.ig-link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
 
-    <div class="footer-col">
-      <h4>Síguenos</h4>
-      <a 
-        href="https://www.instagram.com/bosquedeluzcabanas" 
-        target="_blank"
-        class="instagram-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        @bosquedeluzcabanas
-      </a>
-    </div>
+/* =========================
+   EXPERIENCIAS
+   ========================= */
 
-  </div>
+#experiencias {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
 
-  <div class="footer-bottom">
-    © 2026 Bosque de Luz Cabañas · Todos los derechos reservados
-  </div>
-</footer>
+.experiencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.experiencia {
+  padding: 30px 20px;
+  border-radius: 18px;
+  background: #fafafa;
+  font-size: 28px;
+}
+
+.experiencia h3 {
+  font-size: 18px;
+  margin: 12px 0 8px;
+}
+
+.experiencia p {
+  font-size: 14px;
+  color: #666;
+}
+
+.eventos {
+  margin-top: 50px;
+  font-size: 15px;
+  color: #444;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   UBICACIÓN / MAPA
+   ========================= */
+
+#ubicacion {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.mapa {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mapa iframe {
+    height: 320px;
+  }
+}
+
+/* =========================
+   BOTÓN CÓMO LLEGAR
+   ========================= */
+
+.btn-mapa {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #0b4f3f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-mapa:hover {
+  background: #083c30;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   WHATSAPP FLOTANTE
+   ========================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  background: #0b4f3f;
+  col
+
 
 <body>
   <!-- Navegación -->
