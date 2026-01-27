@@ -468,6 +468,26 @@
   padding-top: 20px;
 }
 
+/* Ajuste de logos en footer */
+.footer img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Ajuste logo Instagram específicamente */
+.instagram-link img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Asegurar que en pantallas grandes no crezcan */
+@media (min-width: 1024px) {
+  .instagram-link img {
+    width: 18px;
+    height: 18px;
+  }
+}
 
   </style>
 </head>
@@ -739,6 +759,7 @@
   <footer>
     <p>&copy; 2026 Bosque de Luz Cabañas. Todos los derechos reservados.</p>
   </footer>
+
 
 </body>
 </html>
