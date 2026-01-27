@@ -1,253 +1,744 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bosque de Luz Cabañas</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
   <style>
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      line-height: 1.7;
-    }
-
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
     h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* NAV */
-    nav {
-      background:#084c3f;
-      color:white;
-      padding:10px 20px;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-
-    nav a {
-      color:white;
-      margin: 0 10px;
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 90vh;
-      overflow: hidden;
-    }
-
-    .hero-video {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 2;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
+  font-family: 'Playfair Display', serif;
+}
+    nav { background:#084c3f; color:white; padding:10px 20px; position:sticky; top:0; }
+    nav a { color:white; margin: 0 10px; text-decoration:none; font-weight:600; }
+    header { background:url('FOTO_HERO.jpg') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
+    header h1 { font-size:3rem; }
     .btn {
-      background: #f2c94c;
-      padding: 14px 30px;
-      color: #084c3f;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 30px;
-    }
+  background: #f2c94c;
+  padding: 14px 30px;
+  color: #084c3f;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
 
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
+.btn:hover {
+  background: #e0b83f;
+  transform: translateY(-2px);
+}
+    section { padding:40px 20px; }
+    .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .card img { width:100%; border-radius:8px; }
+    footer { background:#084c3f; color:white; text-align:center; padding:20px; }
+    .hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
     #sobre {
-      max-width: 900px;
-      margin: auto;
-    }
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+    .card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 14px;
+}
+    .scroll-down {
+  position: absolute;
+  bottom: 25px;
+  font-size: 2.5rem;
+  color: white;
+  animation: bounce 2s infinite;
+  z-index: 4;
+}
 
-    /* CABAÑAS */
-    #cabanas {
-      max-width: 1100px;
-      margin: auto;
-    }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
 
-    .cabana-card {
-      border: 1px solid #eee;
-      border-radius: 20px;
-      margin-bottom: 30px;
-      overflow: hidden;
-    }
+/* CABAÑAS */
+#cabanas {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    summary {
-      padding: 20px;
-      cursor: pointer;
-    }
+.cabana {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+.cabana summary::-webkit-details-marker {
+  display: none;
+}
 
-    .cabana-info {
-      padding: 20px;
-    }
+.cabana h3 {
+  margin: 0;
+}
 
-    .cabana-galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-top: 20px;
-    }
+.cabana p {
+  margin: 0;
+  color: #666;
+}
 
-    .cabana-galeria img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+.cabana .btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+}
 
-    /* INSTAGRAM */
-    .ig-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.cabana-info {
+  padding: 30px;
+}
 
-    .ig-link img {
-      width: 22px;
-      height: 22px;
-    }
+/* GALERÍA ESTILO SOTAVENTO */
+.cabana-galeria {
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
 
-    /* EXPERIENCIAS */
-    .experiencias-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+.cabana-galeria img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
-    .experiencia {
-      background: #fafafa;
-      padding: 25px;
-      border-radius: 18px;
-    }
+@media (max-width: 768px) {
+  .cabana-galeria {
+    max-width: 100%;
+  }
 
-    /* MAPA */
-    .mapa {
-      max-width: 1000px;
-      margin: 30px auto;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+  .cabana-galeria img {
+    height: 120px;
+  }
+#instagram {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-    .mapa iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-    }
+#instagram p {
+  margin-bottom: 15px;
+  color: #666;
+}
 
-    .btn-mapa {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      background: #0b4f3f;
-      color: white;
-      border-radius: 40px;
-      text-decoration: none;
-    }
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
 
-    /* FOOTER */
-    footer {
-      background:#084c3f;
-      color:white;
-      text-align:center;
-      padding:30px 20px;
-    }
+.ig-link img {
+  width: 26px;
+  height: 26px;
+}
+#experiencias {
+  padding: 80px 20px;
+}
+
+.experiencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.experiencia {
+  padding: 25px 10px;
+}
+
+.experiencia h3 {
+  margin-bottom: 10px;
+}
+
+.experiencia p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* EVENTOS */
+.eventos {
+  margin-top: 70px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.eventos h3 {
+  margin-bottom: 15px;
+}
+
+.eventos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.eventos li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+  @media (min-width: 1024px) {
+  #instagram,
+  #experiencias {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+  #instagram {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.ig-link img {
+  width: 42px;       /* tamaño perfecto desktop */
+  height: 42px;
+}
+
+@media (max-width: 768px) {
+  .ig-link img {
+    width: 32px;     /* más pequeño en celular */
+    height: 32px;
+  }
+}
+#instagram {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.ig-link img {
+  width: 42px;       /* tamaño perfecto desktop */
+  height: 42px;
+}
+
+@media (max-width: 768px) {
+  .ig-link img {
+    width: 32px;     /* más pequeño en celular */
+    height: 32px;
+  }
+}
+  #experiencias {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.experiencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.experiencia {
+  padding: 30px 20px;
+  border-radius: 18px;
+  background: #fafafa;
+  font-size: 28px;
+}
+
+.experiencia h3 {
+  font-size: 18px;
+  margin: 12px 0 8px;
+}
+
+.experiencia p {
+  font-size: 14px;
+  color: #666;
+}
+
+.eventos {
+  margin-top: 50px;
+  font-size: 15px;
+  color: #444;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ubicacion {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.mapa {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mapa iframe {
+    height: 320px;
+  }
+}
+  .btn-mapa {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: #0b4f3f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-mapa:hover {
+  background: #083c30;
+  transform: translateY(-2px);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+  .footer {
+  background: #0b4f3f;
+  color: #fff;
+  padding: 60px 20px 30px;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.instagram-link img {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #cfcfcf;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 20px;
+}
+
+
   </style>
 </head>
+<a 
+  href="https://wa.me/50494527261" 
+  class="whatsapp-float" 
+  target="_blank"
+  aria-label="WhatsApp Bosque de Luz">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+  <footer class="footer">
+  <div class="footer-contenido">
+
+    <div class="footer-col">
+      <h3>Bosque de Luz Cabañas</h3>
+      <p>
+        Un refugio natural en Mogote, Santa Bárbara.<br>
+        Naturaleza, descanso y experiencias inolvidables.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Ubicación</h4>
+      <p>Mogote, Santa Bárbara<br>Bosque de Luz</p>
+      <a href="https://maps.app.goo.gl/ggpqtQFWQF7kNaeF8" target="_blank">
+        📍 Cómo llegar
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📞 +504 9452 7261</p>
+      <a href="https://wa.me/50494527261" target="_blank">
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <a 
+        href="https://www.instagram.com/bosquedeluzcabanas" 
+        target="_blank"
+        class="instagram-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        @bosquedeluzcabanas
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Bosque de Luz Cabañas · Todos los derechos reservados
+  </div>
+</footer>
 
 <body>
+  <!-- Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#cabanas">Cabañas</a>
+    <a href="#experiencias">Experiencias</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-<nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#cabanas">Cabañas</a>
-  <a href="#experiencias">Experiencias</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
+  <!-- Hero -->
 <header id="inicio" class="hero">
   <video autoplay muted loop playsinline class="hero-video">
     <source src="video-bosque.mp4" type="video/mp4">
+    Tu navegador no soporta video.
   </video>
+
   <div class="hero-content">
     <h1>Bosque de Luz Cabañas</h1>
     <p>Un refugio natural entre el bosque y la tranquilidad</p>
     <a href="#contacto" class="btn">Reserva Ahora</a>
+    <div class="scroll-down">⌄</div>
   </div>
 </header>
-
+  <!-- Sobre Nosotros -->
 <section id="sobre">
   <h2>Sobre nosotros</h2>
-  <p>Hotel distribuido en cuatro cabañas en Mogote, Santa Bárbara.</p>
+
+  <p>
+    <strong>Bosque de Luz</strong> es un hotel distribuido en cuatro acogedoras cabañas, ideales para parejas, familias o grupos de amigos.
+    Contamos con dos cabañas para hasta <strong>4 personas</strong> y dos cabañas amplias para <strong>6 a 7 personas</strong>,
+    todas equipadas con las comodidades necesarias para que vivas una estadía inolvidable en medio de la naturaleza.
+  </p>
+
+  <p>
+    Ubicadas en <strong>Mogote, Santa Bárbara</strong>, nuestras cabañas te invitan a desconectarte y disfrutar de un verdadero
+    paraíso natural.
+  </p>
 </section>
 
-<section id="cabanas">
+  <!-- Cabañas -->
+ <section id="cabanas">
   <h2>Nuestras Cabañas</h2>
-  <!-- tus cards ya funcionan -->
-</section>
+  <div class="grid">
 
+   <div class="cabana-card">
+  <details>
+    <summary>
+      <h3>La Paisita</h3>
+      <p>Hasta 4 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Cabaña acogedora ideal para parejas o grupos pequeños, rodeada de naturaleza.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="paisita1.jpeg">
+        <img src="paisita2.jpeg">
+        <img src="paisita3.jpeg">
+      </div>
+    </div>
+  </details>
+</div>
+   <div class="cabana-card">
+  <details>
+    <summary>
+      <h3>Esmeralda</h3>
+      <p>Hasta 4 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Cabaña acogedora ideal para parejas o grupos pequeños, rodeada de naturaleza.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="Esmeralda1.jpeg">
+        <img src="Esmeralda2.jpeg">
+        <img src="Esmeralda3.jpeg">
+      </div>
+    </div>
+  </details>
+</div>
+      <div class="cabana-card">
+  <details>
+    <summary>
+      <h3>Cielo</h3>
+      <p>Hasta 7 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+         Amplia y cómoda, ideal para familias o grupos grandes.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="Cielo1.jpeg">
+        <img src="Cielo2.jpeg">
+        <img src="Cielo3.jpeg">
+      </div>
+    </div>
+  </details>
+</div>
+
+   <div class="cabana-card">
+  <details>
+    <summary>
+      <h3>Agata</h3>
+      <p>Hasta 7 personas</p>
+      <span class="btn">Ver más</span>
+    </summary>
+
+    <div class="cabana-info">
+      <p>
+        Espaciosa, elegante y rodeada de bosque.
+      </p>
+
+      <div class="cabana-galeria">
+        <img src="Ágata1.jpeg">
+        <img src="Ágata2.jpeg">
+        <img src="Ágata3.jpeg">
+      </div>
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
 <section id="instagram">
-  <a href="https://www.instagram.com/bosquedeluzcabanas" class="ig-link" target="_blank">
-    <img src="instagram.png"> @bosquedeluzcabanas
+  <p>Síguenos en Instagram</p>
+  <a href="https://www.instagram.com/bosquedeluzcabanas" target="_blank" class="ig-link">
+    <img src="instagram.png" alt="Instagram Bosque de Luz">
+    <span>@bosquedeluzcabanas</span>
   </a>
 </section>
 
-<section id="experiencias">
-  <h2>Experiencias</h2>
+ <section id="experiencias">
+  <h2>Experiencias en Bosque de Luz</h2>
+
+  <div class="experiencias-grid">
+
+    <div class="experiencia">
+      🌿
+      <h3>Senderismo</h3>
+      <p>Recorridos naturales entre el bosque y la tranquilidad del entorno.</p>
+    </div>
+
+    <div class="experiencia">
+      🎣
+      <h3>Lago y pesca</h3>
+      <p>Disfruta del lago, la calma y momentos únicos de pesca.</p>
+    </div>
+
+    <div class="experiencia">
+      🛝
+      <h3>Parque infantil</h3>
+      <p>Columpios, resbaladeras y diversión para los más pequeños.</p>
+    </div>
+
+    <div class="experiencia">
+      🔥
+      <h3>Fogata</h3>
+      <p>Noches especiales alrededor del fuego bajo las estrellas.</p>
+    </div>
+
+    <div class="experiencia">
+      🏊‍♀️
+      <h3>Piscina</h3>
+      <p>Espacio para relajarte y disfrutar durante el día.</p>
+    </div>
+
+    <div class="experiencia">
+      🍽️
+      <h3>Áreas comunes</h3>
+      <p>Espacios para comer y compartir fuera de las cabañas.</p>
+    </div>
+
+  </div>
+
+  <p class="eventos">
+    También realizamos <strong>celebraciones especiales</strong> como cumpleaños,
+    bodas, pedidas de mano, aniversarios y eventos privados
+    <em>(con costo adicional)</em>.
+  </p>
 </section>
 
 <section id="ubicacion">
-  <h2>Ubicación</h2>
+  <h2>¿Dónde estamos?</h2>
+  <p>Mogote, Santa Bárbara – Bosque de Luz Cabañas</p>
+
   <div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.0132939580485!2d-88.0667077!3d14.768281199999999"></iframe>
+    <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.0132939580485!2d-88.0667077!3d14.768281199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f65cf00508ba109%3A0xe26184e22578cc04!2sCABA%C3%91AS%20BOSQUE%20DE%20LUZ!5e0!3m2!1ses-419!2sco!4v1769477548356!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>>
   </div>
-  <a class="btn-mapa" href="https://maps.app.goo.gl/ggpqtQFWQF7kNaeF8" target="_blank">📍 Cómo llegar</a>
+</section>
+ <a 
+  href="https://maps.app.goo.gl/ggpqtQFWQF7kNaeF8" 
+  target="_blank" 
+  class="btn-mapa">
+  📍 Cómo llegar
+</a>
+  <!-- Contacto -->
+<section id="contacto">
+  <h2>Ubicación & Reservas</h2>
+  <p>📍 Mogote, Santa Bárbara – Bosque de Luz</p>
+  <a class="btn" href="https://wa.me/50494527261">Reserva por WhatsApp</a>
 </section>
 
-<footer>
-  © 2026 Bosque de Luz Cabañas
-</footer>
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 Bosque de Luz Cabañas. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
