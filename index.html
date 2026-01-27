@@ -413,6 +413,61 @@
   width: 32px;
   height: 32px;
 }
+  .footer {
+  background: #0b4f3f;
+  color: #fff;
+  padding: 60px 20px 30px;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.instagram-link img {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #cfcfcf;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 20px;
+}
+
 
   </style>
 </head>
@@ -423,6 +478,51 @@
   aria-label="WhatsApp Bosque de Luz">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+  <footer class="footer">
+  <div class="footer-contenido">
+
+    <div class="footer-col">
+      <h3>Bosque de Luz Cabañas</h3>
+      <p>
+        Un refugio natural en Mogote, Santa Bárbara.<br>
+        Naturaleza, descanso y experiencias inolvidables.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Ubicación</h4>
+      <p>Mogote, Santa Bárbara<br>Bosque de Luz</p>
+      <a href="https://maps.app.goo.gl/ggpqtQFWQF7kNaeF8" target="_blank">
+        📍 Cómo llegar
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📞 +504 9452 7261</p>
+      <a href="https://wa.me/50494527261" target="_blank">
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <a 
+        href="https://www.instagram.com/bosquedeluzcabanas" 
+        target="_blank"
+        class="instagram-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        @bosquedeluzcabanas
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Bosque de Luz Cabañas · Todos los derechos reservados
+  </div>
+</footer>
+
 <body>
   <!-- Navegación -->
   <nav>
